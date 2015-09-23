@@ -1,0 +1,48 @@
+{
+  "name": "tv-enable",
+  "version": "0.0.0",
+  "description": "register TV plugin with all dependencies",
+  "main": "index.js",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js"
+  ],
+  "scripts": {
+    "test": "lab -v -c test.js",
+    "check-coverage": "lab -t 100 -r html -o coverage.html test.js",
+    "open-coverage": "open coverage.html",
+    "jshint": "jshint -c .jshintrc *.js",
+    "code-style": "jscs -p google *.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/joaquimserafim/tv-enable.git"
+  },
+  "keywords": [
+    "tv",
+    "hapi",
+    "debug",
+    "console"
+  ],
+  "author": "@joaquimserafim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaquimserafim/tv-enable/issues"
+  },
+  "homepage": "https://github.com/joaquimserafim/tv-enable",
+  "pre-commit": [
+    "jshint",
+    "code-style",
+    "test",
+    "check-coverage"
+  ],
+  "devDependencies": {
+    "code": "^1.5.0",
+    "hapi": "^10.0.1",
+    "jscs": "^2.1.1",
+    "jshint": "^2.8.0",
+    "lab": "^5.18.1",
+    "pre-commit": "^1.1.1"
+  }
+}
