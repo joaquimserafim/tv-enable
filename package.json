@@ -1,6 +1,6 @@
 {
   "name": "tv-enable",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "register TV plugin with all dependencies",
   "main": "index.js",
   "files": [

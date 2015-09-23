@@ -7,6 +7,10 @@ register TV plugin with all dependencies
 [![Build Status](https://travis-ci.org/joaquimserafim/tv-enable.png?branch=master)](https://travis-ci.org/joaquimserafim/tv-enable)
 
 
+## API
+
+**tvEnable(hapi server object, [tv options - js object,] callback(*error* object))**
+
 
 ## Usage
 

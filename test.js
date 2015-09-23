@@ -26,6 +26,18 @@ describe('tv', function() {
     })
   })
 
+  it('should do the register passing options to TV', function(done) {
+    var server = new Hapi.Server()
+
+    server.connection({})
+
+    tvEnable(server, {port: 9000}, function(err) {
+      expect(err).to.be.null()
+      expect(server.views).to.exists()
+      done()
+    })
+  })
+
   it('should fail doing the register', function(done) {
     var server = {
       register: function(_, cb) {

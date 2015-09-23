@@ -6,11 +6,15 @@ var Inert   = require('inert')
 
 module.exports = tvEnable;
 
-function tvEnable(server, callback) {
+function tvEnable(server, options, cb) {
+  if (typeof options === 'function') {
+    cb      = options
+    options = {}
+  }
 
-  server.register([Inert, Vision, Tv], registerCb)
+  server.register([Inert, Vision, {register: Tv, options: options}], registerCb)
 
   function registerCb(err) {
-    callback(err || null)
+    cb(err || null)
   }
 }
