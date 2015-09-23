@@ -10,8 +10,16 @@ register TV plugin with all dependencies
 
 ####API
 
-```js    
-var tvEnable = require('tv-enable')
+```js
+var Hapi        = require('hapi')
+var tvEnable    = require('tv-enable')
 
+...
+
+var server = new Hapi.Server()
+
+...
+
+tvEnable(server, function(err) {})
 
 ```
